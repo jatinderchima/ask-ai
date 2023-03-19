@@ -84,15 +84,18 @@ const handleSubmit = async (e) => {
   // messageDiv.innerHTML = "..."
   loader(messageDiv);
 
-  const response = await fetch("https://ask-ai.jatinderchima.com", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      prompt: data.get("prompt"),
-    }),
-  });
+  const response = await fetch(
+    "https://ask-nktbm60su-jatinderchima-gmailcom.vercel.app",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        prompt: data.get("prompt"),
+      }),
+    }
+  );
 
   clearInterval(loadInterval);
   messageDiv.innerHTML = " ";
