@@ -1,1 +1,1 @@
-# open_ai_codex
+# ask-ai
