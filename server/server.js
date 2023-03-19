@@ -12,7 +12,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const app = express();
-app.use(cors());
+app.use(cors({orgin: "*"}));
 app.use(express.json());
 
 app.get("/", async (req, res) => {
@@ -45,5 +45,5 @@ app.post("/", async (req, res) => {
 });
 
 app.listen(5000, () =>
-  console.log("AI server started on http://localhost:5000")
+  console.log("AI server started on https://ask-ai.jatinderchima.com")
 );
